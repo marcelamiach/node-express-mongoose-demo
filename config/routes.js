@@ -8,6 +8,7 @@ const users = require('../app/controllers/users');
 const articles = require('../app/controllers/articles');
 const comments = require('../app/controllers/comments');
 const tags = require('../app/controllers/tags');
+const analytics = require('../app/controllers/analytics');
 const auth = require('./middlewares/authorization');
 
 /**
