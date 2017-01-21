@@ -1,0 +1,13 @@
+div
+  h3= "Tag: " + tag.tag
+    table
+      h5
+        thead
+          tr
+            th Word
+            th Frequency
+        tbody
+          for frequency in tag.frequencies
+            tr
+              td= frequency.word
+              td= frequency.frequency
