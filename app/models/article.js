@@ -172,6 +172,21 @@ ArticleSchema.statics = {
       .limit(limit)
       .skip(limit * page)
       .exec();
+  },
+  
+  /**
+   * List ALL articles, no limit or pagination
+   *
+   * @param {Object} options
+   * @api private
+   */
+
+  listAll: function (options) {
+    const criteria = options.criteria || {};
+    return this.find(criteria)
+      .populate('user', 'name username')
+      .sort({ createdAt: -1 })
+      .exec();
   }
 };
 
