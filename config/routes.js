@@ -91,6 +91,8 @@ module.exports = function (app, passport) {
   // tag routes
   app.get('/tags/:tag', tags.index);
 
+  // analytics routes
+  app.get('/analytics/:userId', analytics.index);
 
   /**
    * Error handling
