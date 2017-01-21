@@ -8,3 +8,5 @@ const mongoose = require('mongoose');
 const { wrap: async } = require('co');
 const { respond } = require('../utils');
 const Article = mongoose.model('Article');
+
+var Handler = require('../utils/frequencyHandler.js');
